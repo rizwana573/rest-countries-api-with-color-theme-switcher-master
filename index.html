@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REST Countries API</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/output.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <script defer src="js/script.js"></script>
+</head>
+
+<body class="text-black font-Nunito w-full">
+    <header class="bg-white shadow-md text-black">
+        <div class="headContent flex flex-col md:flex-row justify-between items-center px-2 md:px-8 py-6 mx-auto w-50 md:w-md xl:w-6xl gap-4 ">
+            <h2 class="font-bold">Where in the world?</h2>
+            <button id="themeToggle" class="cursor-pointer hover:opacity-50">
+                <i id="moonIcon" class="fa-solid fa-moon mr-1"></i><span id="darkText">Dark
+                    Mode</span>
+                <i class="fa-solid fa-sun !hidden mr-1.5" id="sunIcon"></i><span id="lightText"
+                    class="hidden">Light Mode</span>
+            </button>
+        </div>
+    </header>
+    <main class="bg-[#f1f1f1] min-h-screen">
+        <section
+            class="controls flex flex-col xl:flex-row justify-between items-center px-2 md:px-2 pt-10 gap-4 mx-auto w-70 md:w-md xl:w-6xl flex-wrap">
+            <div class="searchBar relative w-full xl:w-sm">
+                <input type="search" id="searchBox" placeholder="Search for a country..."
+                    class="mx-auto w-full p-3 shadow-md rounded-md text-center bg-white" /><i
+                    class="fa-solid fa-magnifying-glass absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            </div>
+            <div class="relative w-full xl:w-60">
+                <select id="regionSelect"
+                    class="w-full p-3 shadow-md rounded-md bg-white cursor-pointer appearance-none">
+                    <option value>Filter by Region</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Americas">Americas</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+                <span class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span>
+            </div>
+        </section>
+
+        <section
+            class="cardsContainer grid grid-cols-1 xl:grid-cols-4 gap-14 px-2 py-10 mx-auto w-70 md:w-md xl:w-6xl">
+        </section>
+        <section
+            class="shimmerContainer grid-cols-1 xl:grid-cols-4 gap-14 pb-10 w-70 md:w-md xl:w-6xl mx-auto hidden">
+            <div class="shimmerCard overflow-hidden bg-white rounded-md shadow-md pb-10 w-64 mx-auto mb-10">
+                <div class="shimmerFlag w-full h-40 bg-gray-300"></div>
+                <div class="shimmerText1 mt-6 mb-4  mx-8 py-4 font-bold"> </div>
+                <div class="shimmerText2 my-4  mx-8 py-2 font-bold"> </div>
+                <div class="shimmerText3 my-4  mx-8 py-2  font-bold"> </div>
+                <div class="shimmerText4 my-4  mx-8 py-2  font-bold"> </div>
+            </div>
+            <div class="shimmerCard overflow-hidden bg-white rounded-md shadow-md pb-10 w-64 mx-auto mb-10">
+                <div class="shimmerFlag w-full h-40 bg-gray-300"></div>
+                <div class="shimmerText1 mt-6 mb-4  mx-8 py-4 font-bold"> </div>
+                <div class="shimmerText2 my-4  mx-8 py-2 font-bold"> </div>
+                <div class="shimmerText3 my-4  mx-8 py-2  font-bold"> </div>
+                <div class="shimmerText4 my-4  mx-8 py-2  font-bold"> </div>
+            </div>
+            <div class="shimmerCard overflow-hidden bg-white rounded-md shadow-md pb-10 w-64 mx-auto mb-10">
+                <div class="shimmerFlag w-full h-40 bg-gray-300"></div>
+                <div class="shimmerText1 mt-6 mb-4  mx-8 py-4 font-bold"> </div>
+                <div class="shimmerText2 my-4  mx-8 py-2 font-bold"> </div>
+                <div class="shimmerText3 my-4  mx-8 py-2  font-bold"> </div>
+                <div class="shimmerText4 my-4  mx-8 py-2  font-bold"> </div>
+            </div>
+            <div class="shimmerCard overflow-hidden bg-white rounded-md shadow-md pb-10 w-64 mx-auto mb-10">
+                <div class="shimmerFlag w-full h-40 bg-gray-300"></div>
+                <div class="shimmerText1 mt-6 mb-4  mx-8 py-4 font-bold"> </div>
+                <div class="shimmerText2 my-4  mx-8 py-2 font-bold"> </div>
+                <div class="shimmerText3 my-4  mx-8 py-2  font-bold"> </div>
+                <div class="shimmerText4 my-4  mx-8 py-2  font-bold"> </div>
+            </div>
+            <div class="shimmerCard overflow-hidden bg-white rounded-md shadow-md pb-10 w-64 mx-auto mb-10">
+                <div class="shimmerFlag w-full h-40 bg-gray-300"></div>
+                <div class="shimmerText1 mt-6 mb-4  mx-8 py-4 font-bold"> </div>
+                <div class="shimmerText2 my-4  mx-8 py-2 font-bold"> </div>
+                <div class="shimmerText3 my-4  mx-8 py-2  font-bold"> </div>
+                <div class="shimmerText4 my-4  mx-8 py-2  font-bold"> </div>
+            </div>
+            <div class="shimmerCard overflow-hidden bg-white rounded-md shadow-md pb-10 w-64 mx-auto mb-10">
+                <div class="shimmerFlag w-full h-40 bg-gray-300"></div>
+                <div class="shimmerText1 mt-6 mb-4  mx-8 py-4 font-bold"> </div>
+                <div class="shimmerText2 my-4  mx-8 py-2 font-bold"> </div>
+                <div class="shimmerText3 my-4  mx-8 py-2  font-bold"> </div>
+                <div class="shimmerText4 my-4  mx-8 py-2  font-bold"> </div>
+            </div>
+            <div class="shimmerCard overflow-hidden bg-white rounded-md shadow-md pb-10 w-64 mx-auto mb-10">
+                <div class="shimmerFlag w-full h-40 bg-gray-300"></div>
+                <div class="shimmerText1 mt-6 mb-4  mx-8 py-4 font-bold"> </div>
+                <div class="shimmerText2 my-4  mx-8 py-2 font-bold"> </div>
+                <div class="shimmerText3 my-4  mx-8 py-2  font-bold"> </div>
+                <div class="shimmerText4 my-4  mx-8 py-2  font-bold"> </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="bg-white text-center text-black py-6">
+        <p>
+            ©
+            <script>
+                document.write(new Date().getFullYear());
+            </script>
+            Made by Rizwana. All rights reserved.
+        </p>
+    </footer>
+</body>
+
+</html>

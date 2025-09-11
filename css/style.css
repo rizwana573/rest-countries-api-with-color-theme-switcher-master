@@ -1,0 +1,51 @@
+.dark, .dark select + span {
+    color: #c1c1c1;
+}
+.dark header, .dark .headContent{
+    background:#262830;
+    color: #c1c1c1;
+}
+.dark .searchBar input,
+.dark .searchBar input::placeholder,
+.dark select,
+.dark .cardWrapper,
+.dark footer{
+    background:#262830;
+    color: #c1c1c1;
+}
+
+.dark main{
+    background:#1c1e24;
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.shimmerFlag,
+.shimmerText1,
+.shimmerText2,
+.shimmerText3,
+.shimmerText4 {
+  position: relative;
+  overflow: hidden;
+  background: #e5e7eb;
+}
+
+.shimmerFlag::after,
+.shimmerText1::after,
+.shimmerText2::after,
+.shimmerText3::after,
+.shimmerText4::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(200,200,200,0.3), transparent);
+  animation: shimmer 1.5s infinite;
+}
