@@ -1,22 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const themeToggle = document.getElementById("themeToggle");
-    const moonIcon = document.getElementById("moonIcon");
-    const sunIcon = document.getElementById("sunIcon");
-    const darkText = document.getElementById("darkText");
-    const lightText = document.getElementById("lightText");
-    const html = document.documentElement;
-
-    themeToggle.addEventListener("click", () => {
-        html.classList.toggle("dark");
-        moonIcon.classList.toggle("!hidden");
-        sunIcon.classList.toggle("!hidden");
-        darkText.classList.toggle("hidden");
-        lightText.classList.toggle("hidden");
-    });
-
     showAllCountries();
-    document.getElementById("regionSelect").addEventListener("change", filterCountries);
-     document.getElementById("searchBox").addEventListener("keydown", debounce(searchCountry, 500));
+    document.getElementById("regionSelect")?.addEventListener("change", filterCountries);
+     document.getElementById("searchBox")?.addEventListener("keydown", debounce(searchCountry, 500));
+
 });
 
 async function showAllCountries() {
@@ -30,8 +16,10 @@ async function showAllCountries() {
 
 function makeCards(data) {
     const cardsContainer = document.querySelector(".cardsContainer");
+     
     data.forEach((country) => {
         const countryCard = document.createElement("div");
+        countryCard.setAttribute("data-country", country.name.common.toLowerCase());
         countryCard.classList.add(
             "cardWrapper",
             "bg-white",
@@ -48,13 +36,17 @@ function makeCards(data) {
             <p class="mb-2"><strong>Capital:</strong> ${country.capital ? country.capital[0] : "N/A"
             }</p>           
         </div>`;
-        cardsContainer.appendChild(countryCard);
+        cardsContainer?.appendChild(countryCard);
+        countryCard.addEventListener("click", ()=> {
+            console.log(`country name: ${countryCard.getAttribute("data-country")}`);
+            location.href =encodeURI(`/countryDetail/index.html?country=${countryCard.getAttribute("data-country")}`);
+        })
     });
 }
 async function filterCountries() {
     const regionSelect = document.getElementById("regionSelect").value;
     if (regionSelect === "") {
-        console.log("all");
+       // console.log("all");
         showAllCountries();
         return;
     }
@@ -111,3 +103,5 @@ function debounce(cb, delay){
         }, delay)
     }
 }
+
+

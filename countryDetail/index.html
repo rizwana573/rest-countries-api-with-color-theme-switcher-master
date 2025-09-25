@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REST Countries API</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <script defer src="../js/common.js"></script>
+    <script defer src="./js/script.js"></script>
+</head>
+
+<body class="text-black font-Nunito w-full">
+    <header class="bg-white shadow-md text-black">
+        <div class="headContent flex flex-col md:flex-row justify-between items-center px-2 md:px-8 py-6 mx-auto w-50 md:w-md xl:w-6xl gap-4 ">
+            <h2 class="font-bold">Where in the world?</h2>
+            <button id="themeToggle" class="cursor-pointer hover:opacity-50">
+                <i id="moonIcon" class="fa-solid fa-moon mr-1"></i><span id="darkText">Dark
+                    Mode</span>
+                <i class="fa-solid fa-sun !hidden mr-1.5" id="sunIcon"></i><span id="lightText"
+                    class="hidden">Light Mode</span>
+            </button>
+        </div>
+    </header> 
+    <main class="bg-[#f1f1f1] min-h-screen">
+        <div
+            class="controls px-2 md:px-2 pt-10 mx-auto w-50 md:w-md xl:w-6xl">
+            <button class="backToHome inline-block relative bg-white shadow-md rounded-md py-3 cursor-pointer hover:opacity-70 hover:scale-105 w-[150px]">
+               <i class="fa-solid fa-arrow-left-long"></i> Back to home
+            </button>
+        </div>
+
+       <section class="countryDetailsContainer px-2 py-10 mx-auto w-70 md:w-md xl:w-6xl">
+
+       </section>
+
+    </main>
+    <footer class="bg-white text-center text-black py-6">
+        <p>
+            ©
+            <script>
+                document.write(new Date().getFullYear());
+            </script>
+            Made by Rizwana. All rights reserved.
+        </p>
+    </footer>
+</body>
+
+</html>
