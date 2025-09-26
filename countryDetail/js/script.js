@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const country = params.get("country");
     if (country) countryDetails(country);
     document.querySelector(".backToHome").addEventListener("click", () => {
-        location.href = "/";
+        location.href = "../index.html";
     })
 
 })
