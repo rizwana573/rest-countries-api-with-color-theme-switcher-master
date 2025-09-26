@@ -15,9 +15,19 @@ async function countryDetails(country) {
     else {
         url = `https://restcountries.com/v3.1/name/${country}?fields=name,flags,population,region,subregion,capital,tld,currencies,languages,borders`;
     }
+    // Show shimmer card
+    const shimmerContainer = document.querySelector(".shimmerContainer");
+    shimmerContainer.classList.remove("hidden");
+    shimmerContainer.classList.add("grid");
+
     const response = await fetch(url);
     const data = await response.json();
+
+
+    shimmerContainer.classList.remove("grid");
+    shimmerContainer.classList.add("hidden");
     makeDetailCard(Array.isArray(data) ? data[0] : data);
+
 }
 
 

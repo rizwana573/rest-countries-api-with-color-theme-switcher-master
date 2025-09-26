@@ -19,7 +19,8 @@
 
 <body class="text-black font-Nunito w-full">
     <header class="bg-white shadow-md text-black">
-        <div class="headContent flex flex-col md:flex-row justify-between items-center px-2 md:px-8 py-6 mx-auto w-50 md:w-md xl:w-6xl gap-4 ">
+        <div
+            class="headContent flex flex-col md:flex-row justify-between items-center px-2 md:px-8 py-6 mx-auto w-50 md:w-md xl:w-6xl gap-4 ">
             <h2 class="font-bold">Where in the world?</h2>
             <button id="themeToggle" class="cursor-pointer hover:opacity-50">
                 <i id="moonIcon" class="fa-solid fa-moon mr-1"></i><span id="darkText">Dark
@@ -28,18 +29,66 @@
                     class="hidden">Light Mode</span>
             </button>
         </div>
-    </header> 
+    </header>
     <main class="bg-[#f1f1f1] min-h-screen">
-        <div
-            class="controls px-2 md:px-2 pt-10 mx-auto w-50 md:w-md xl:w-6xl">
-            <button class="backToHome inline-block relative bg-white shadow-md rounded-md py-3 cursor-pointer hover:opacity-70 hover:scale-105 w-[150px]">
-               <i class="fa-solid fa-arrow-left-long"></i> Back to home
+        <div class="controls px-2 md:px-2 pt-10 mx-auto w-50 md:w-md xl:w-6xl">
+            <button
+                class="backToHome inline-block relative bg-white shadow-md rounded-md py-3 cursor-pointer hover:opacity-70 hover:scale-105 w-[150px]">
+                <i class="fa-solid fa-arrow-left-long"></i> Back to home
             </button>
         </div>
 
-       <section class="countryDetailsContainer px-2 py-10 mx-auto w-70 md:w-md xl:w-6xl">
+        <section class="countryDetailsContainer px-2 py-10 mx-auto w-70 md:w-md xl:w-6xl">
 
-       </section>
+        </section>
+        <!-- <section
+            class="shimmerContainer pb-10 w-70 md:w-md xl:w-6xl mx-auto hidden">
+            <div
+                class="shimmerCard flex flex-col md:flex-row gap-12 overflow-hidden bg-white rounded-md shadow-md pb-10 w-full mx-auto mb-10">
+                <div class="shimmerFlag w-full md:w-1/2 object-cover rounded-md shadow-md h-80 bg-gray-300"></div>
+                <div class="shimmerText1 mt-6 mb-4 mx-8 py-4 font-bold"></div>
+                <div class="shimmerText2 my-4 mx-8 py-2 font-bold"></div>
+                <div class="shimmerText3 my-4 mx-8 py-2 font-bold"></div>
+                <div class="shimmerText4 my-4 mx-8 py-2 font-bold"></div>
+            </div>
+        </section> -->
+        <section
+  class="shimmerContainer pb-10 w-70 md:w-md xl:w-6xl mx-auto hidden"
+>
+  <div
+    class="shimmerCard flex flex-col md:flex-row gap-12 items-start bg-white rounded-md shadow-md p-6 w-full mx-auto"
+  >
+    <!-- Flag Placeholder -->
+    <div class="shimmerFlag w-full md:w-1/2 h-80 bg-gray-300 rounded-md"></div>
+
+    <!-- Text placeholders -->
+    <div class="shimmerInfo w-full md:w-1/2 flex flex-col gap-6">
+      <!-- Country Name -->
+      <div class="shimmerText1 h-8 w-1/2 bg-gray-300 rounded-md my-8"></div>
+
+      <!-- Details grid -->
+      <div class="details grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4">
+        <div class="col1 flex flex-col gap-3">
+          <div class="shimmerText2 h-6 w-40 bg-gray-300 rounded-md"></div>
+          <div class="shimmerText3 h-6 w-32 bg-gray-300 rounded-md"></div>
+          <div class="shimmerText4 h-6 w-36 bg-gray-300 rounded-md"></div>
+          <div class="shimmerText5 h-6 w-28 bg-gray-300 rounded-md"></div>
+        </div>
+        <div class="col2 flex flex-col gap-3">
+          <div class="shimmerText6 h-6 w-32 bg-gray-300 rounded-md"></div>
+          <div class="shimmerText7 h-6 w-36 bg-gray-300 rounded-md"></div>
+          <div class="shimmerText8 h-6 w-28 bg-gray-300 rounded-md"></div>
+        </div>
+      </div>
+
+      <div class="borderShimmer flex flex-wrap gap-2">
+        <div class="h-8 w-16 bg-gray-300 rounded-md"></div>
+        <div class="h-8 w-14 bg-gray-300 rounded-md"></div>
+        <div class="h-8 w-20 bg-gray-300 rounded-md"></div>
+      </div>
+    </div>
+  </div>
+</section>
 
     </main>
     <footer class="bg-white text-center text-black py-6">
