@@ -39,7 +39,7 @@ function makeCards(data) {
         cardsContainer?.appendChild(countryCard);
         countryCard.addEventListener("click", ()=> {
             console.log(`country name: ${countryCard.getAttribute("data-country")}`);
-            location.href =encodeURI(`/countryDetail/index.html?country=${countryCard.getAttribute("data-country")}`);
+            location.href =encodeURI(`countryDetail/index.html?country=${countryCard.getAttribute("data-country")}`);
         })
     });
 }
